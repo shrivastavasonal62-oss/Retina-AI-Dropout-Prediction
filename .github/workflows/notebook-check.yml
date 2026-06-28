@@ -22,7 +22,7 @@ jobs:
         run: pip install nbconvert
 
       - name: Convert notebook to script (validates notebook structure)
-        run: jupyter nbconvert --to script notebooks/retina_ai_dropout_prediction.ipynb --output retina_check
+        run: jupyter nbconvert --to script notebooks/retina_ai_dropout_prediction.ipynb --output-dir . --output retina_check
 
       - name: Check Python syntax
         run: python -m py_compile retina_check.py
